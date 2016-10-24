@@ -140,4 +140,16 @@ describe('String class extention', function () {
     });
   });
 
+  /** Test suite to ensure that isDigit method returns
+   * true if its given a digit and false if its not
+   */
+  describe('isDigit method', function() {
+
+    it('Should return a boolean if a given string is a digit', function() {
+      expect('1'.isDigit()).not.toBe(null);
+      expect(typeof '1'.isDigit()).toBe('boolean');
+      expect('1'.isDigit()).toBe(true);
+    });
+  });
+
 });
