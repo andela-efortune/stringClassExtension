@@ -76,6 +76,7 @@ describe('String class extention', function () {
     });
   });
 
+
   /** Test suite to ensure that fromCurrency method returns a
    * number representation  of a given string
    */
