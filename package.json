@@ -4,7 +4,7 @@
   "description": "A JavaScript String Class Extension that uses a Prototype Oriented Programming to support string manipulation",
   "main": "stringClassExt.js",
   "scripts": {
-    "test": "npm test"
+    "test": "node_modules/karma/bin/karma start karma.conf.js --single-run"
   },
   "repository": {
     "type": "git",
