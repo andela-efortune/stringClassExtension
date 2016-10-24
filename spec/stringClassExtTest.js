@@ -40,4 +40,18 @@ describe('String class extention', function () {
     });
   });
 
+  /** Test suite to ensure that words method returns an
+   * Array of words from a given string
+   */
+  describe('words method', function () {
+
+    it('Should return an array of words from a given string', function () {
+      expect('call me'.words()).not.toBe(null);
+      expect(typeof 'call me'.words()).toBe('object');
+      expect(Array.isArray('call me'.words())).toBeTruthy();
+      expect('call me'.words()).toEqual(['call', 'me']);
+    });
+  });
+
+
 });
