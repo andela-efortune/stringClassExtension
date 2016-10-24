@@ -80,10 +80,10 @@ describe('String class extention', function () {
   /** Test suite to ensure that fromCurrency method returns a
    * number representation  of a given string
    */
-  describe('fromCurrency method', function() {
+  describe('fromCurrency method', function () {
 
     it('Should return a number representation of a currency representation string',
-      function() {
+      function () {
         expect('100,000.83'.fromCurrency()).not.toBe(null);
         expect(typeof '100,000.83'.fromCurrency()).toBe('string');
         expect('100,000.83'.fromCurrency()).toEqual('100000.83');
@@ -93,9 +93,9 @@ describe('String class extention', function () {
   /** Test suite to ensure that inverseCase method returns a
    * a string that is an inverse case of each letter in a given string
    */
-  describe('inverseCase method', function() {
+  describe('inverseCase method', function () {
 
-    it('Should return an inverse case of each letter in a string', function() {
+    it('Should return an inverse case of each letter in a string', function () {
       expect('FoRtunE'.inverseCase()).not.toBe(null);
       expect(typeof 'FoRtunE'.inverseCase()).toBe('string');
       expect('FoRtunE'.inverseCase()).toEqual('fOrTUNe');
@@ -106,9 +106,9 @@ describe('String class extention', function () {
    * string that is in alternating cases of each character in a given string
    * and it must start with a lower case
    */
-  describe('alternatingCase method', function() {
+  describe('alternatingCase method', function () {
 
-    it('Should return alternating cases of each character in a string', function() {
+    it('Should return alternating cases of each character in a string', function () {
       expect('fortune'.alternatingCase()).not.toBe(null);
       expect(typeof 'fortune'.alternatingCase()).toBe('string');
       expect('fortune'.alternatingCase()).toEqual('fOrTuNe');
@@ -119,9 +119,9 @@ describe('String class extention', function () {
    * string that is a character(s) in the middle of the given
    * string
    */
-  describe('getMiddle method', function() {
+  describe('getMiddle method', function () {
 
-    it('Should return the character(s) in the middle of a string', function() {
+    it('Should return the character(s) in the middle of a string', function () {
       expect('alice'.getMiddle()).not.toBe(null);
       expect(typeof 'alice'.getMiddle()).toBe('string');
       expect('alice'.getMiddle()).toEqual('i');
@@ -131,9 +131,9 @@ describe('String class extention', function () {
   /** Test suite to ensure that numberWords method returns
    * numbers in words
    */
-  describe('numberWords method', function() {
+  describe('numberWords method', function () {
 
-    it('Should return numbers in words', function() {
+    it('Should return numbers in words', function () {
       expect('10'.numberWords()).not.toBe(null);
       expect(typeof '10'.numberWords()).toBe('string');
       expect('10'.numberWords()).toEqual('ten');
@@ -143,9 +143,9 @@ describe('String class extention', function () {
   /** Test suite to ensure that isDigit method returns
    * true if its given a digit and false if its not
    */
-  describe('isDigit method', function() {
+  describe('isDigit method', function () {
 
-    it('Should return a boolean if a given string is a digit', function() {
+    it('Should return a boolean if a given string is a digit', function () {
       expect('1'.isDigit()).not.toBe(null);
       expect(typeof '1'.isDigit()).toBe('boolean');
       expect('1'.isDigit()).toBe(true);
@@ -156,17 +156,17 @@ describe('String class extention', function () {
    * true if a string contain double characters including
    * whitespaces and false if it doesn't
    */
-  describe('doubleCheck method', function() {
+  describe('doubleCheck method', function () {
 
     it('Should return a boolean if a given string contains double characters',
-      function() {
+      function () {
         expect('hello dear'.doubleCheck()).not.toBe(null);
         expect(typeof 'hello dear'.doubleCheck()).toBe('boolean');
         expect('hello dear'.doubleCheck()).toBe(true);
       });
 
     it('Should return a boolean if a given string contains double whitespaces',
-      function() {
+      function () {
         expect('hello dear'.doubleCheck()).not.toBe(null);
         expect(typeof 'hello dear'.doubleCheck()).toBe('boolean');
         expect('hello  dear'.doubleCheck()).toBe(true);
