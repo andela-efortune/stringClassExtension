@@ -65,4 +65,15 @@ describe('String class extention', function () {
     });
   });
 
+  /** Test suite to ensure that toCurrency method returns a
+   *currency representation  of a given string
+   */
+  describe('toCurrency method', function () {
+
+    it('Should return a currency representation of a string', function () {
+      expect('100000.83'.toCurrency()).not.toBe(null);
+      expect('100000.83'.toCurrency()).toEqual('100,000.83');
+    });
+  });
+
 });
