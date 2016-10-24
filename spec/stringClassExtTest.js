@@ -115,4 +115,17 @@ describe('String class extention', function () {
     });
   });
 
+  /** Test suite to ensure that getMiddle method returns a
+   * string that is a character(s) in the middle of the given
+   * string
+   */
+  describe('getMiddle method', function() {
+
+    it('Should return the character(s) in the middle of a string', function() {
+      expect('alice'.getMiddle()).not.toBe(null);
+      expect(typeof 'alice'.getMiddle()).toBe('string');
+      expect('alice'.getMiddle()).toEqual('i');
+    });
+  });
+
 });
