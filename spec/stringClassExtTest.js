@@ -66,7 +66,7 @@ describe('String class extention', function () {
   });
 
   /** Test suite to ensure that toCurrency method returns a
-   *currency representation  of a given string
+   * currency representation  of a given string
    */
   describe('toCurrency method', function () {
 
@@ -74,6 +74,19 @@ describe('String class extention', function () {
       expect('100000.83'.toCurrency()).not.toBe(null);
       expect('100000.83'.toCurrency()).toEqual('100,000.83');
     });
+  });
+
+  /** Test suite to ensure that fromCurrency method returns a
+   * number representation  of a given string
+   */
+  describe('fromCurrency method', function() {
+
+    it('Should return a number representation of a currency representation string',
+      function() {
+        expect('100,000.83'.fromCurrency()).not.toBe(null);
+        expect(typeof '100,000.83'.fromCurrency()).toBe('string');
+        expect('100,000.83'.fromCurrency()).toEqual('100000.83');
+      });
   });
 
 });
