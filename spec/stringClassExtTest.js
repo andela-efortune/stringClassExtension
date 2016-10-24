@@ -102,4 +102,17 @@ describe('String class extention', function () {
     });
   });
 
+  /** Test suite to ensure that alternatingCase method returns a
+   * string that is in alternating cases of each character in a given string
+   * and it must start with a lower case
+   */
+  describe('alternatingCase method', function() {
+
+    it('Should return alternating cases of each character in a string', function() {
+      expect('fortune'.alternatingCase()).not.toBe(null);
+      expect(typeof 'fortune'.alternatingCase()).toBe('string');
+      expect('fortune'.alternatingCase()).toEqual('fOrTuNe');
+    });
+  });
+
 });
