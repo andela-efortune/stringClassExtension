@@ -152,4 +152,25 @@ describe('String class extention', function () {
     });
   });
 
+  /** Test suite to ensure that doubleCheck method returns
+   * true if a string contain double characters including
+   * whitespaces and false if it doesn't
+   */
+  describe('doubleCheck method', function() {
+
+    it('Should return a boolean if a given string contains double characters',
+      function() {
+        expect('hello dear'.doubleCheck()).not.toBe(null);
+        expect(typeof 'hello dear'.doubleCheck()).toBe('boolean');
+        expect('hello dear'.doubleCheck()).toBe(true);
+      });
+
+    it('Should return a boolean if a given string contains double whitespaces',
+      function() {
+        expect('hello dear'.doubleCheck()).not.toBe(null);
+        expect(typeof 'hello dear'.doubleCheck()).toBe('boolean');
+        expect('hello  dear'.doubleCheck()).toBe(true);
+      });
+  });
+
 });
