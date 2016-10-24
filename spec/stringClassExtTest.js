@@ -90,4 +90,16 @@ describe('String class extention', function () {
       });
   });
 
+  /** Test suite to ensure that inverseCase method returns a
+   * a string that is an inverse case of each letter in a given string
+   */
+  describe('inverseCase method', function() {
+
+    it('Should return an inverse case of each letter in a string', function() {
+      expect('FoRtunE'.inverseCase()).not.toBe(null);
+      expect(typeof 'FoRtunE'.inverseCase()).toBe('string');
+      expect('FoRtunE'.inverseCase()).toEqual('fOrTUNe');
+    });
+  });
+
 });
