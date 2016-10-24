@@ -53,5 +53,16 @@ describe('String class extention', function () {
     });
   });
 
+  /** Test suite to ensure that wordCount method returns the
+   * Number of words in a given string
+   */
+  describe('wordCount method', function () {
+
+    it('Should return the number of words in a string', function () {
+      expect('hello word'.wordCount()).not.toBe(null);
+      expect(typeof 'hello word'.wordCount()).toBe('number');
+      expect('hello word'.wordCount()).toEqual(2);
+    });
+  });
 
 });
