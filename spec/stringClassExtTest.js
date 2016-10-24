@@ -128,4 +128,16 @@ describe('String class extention', function () {
     });
   });
 
+  /** Test suite to ensure that numberWords method returns
+   * numbers in words
+   */
+  describe('numberWords method', function() {
+
+    it('Should return numbers in words', function() {
+      expect('10'.numberWords()).not.toBe(null);
+      expect(typeof '10'.numberWords()).toBe('string');
+      expect('10'.numberWords()).toEqual('ten');
+    });
+  });
+
 });
