@@ -1,0 +1,34 @@
+{
+  "name": "stringclassextension",
+  "version": "1.0.0",
+  "description": "A JavaScript String Class Extension that uses a Prototype Oriented Programming to support string manipulation",
+  "main": "stringClassExt.js",
+  "scripts": {
+    "test": "node_modules/karma/bin/karma start karma.conf.js --single-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andela-efortune/stringClassExtension.git"
+  },
+  "keywords": [
+    "String",
+    "Prototype",
+    "Oriented",
+    "RegEx",
+    "Javascript"
+  ],
+  "author": "fortune",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andela-efortune/stringClassExtension/issues"
+  },
+  "homepage": "https://github.com/andela-efortune/stringClassExtension#readme",
+  "devDependencies": {
+    "coveralls": "^2.11.14",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.3.0",
+    "karma-coverage": "^1.1.1",
+    "karma-firefox-launcher": "~0.1",
+    "karma-jasmine": "^1.0.2"
+  }
+}
