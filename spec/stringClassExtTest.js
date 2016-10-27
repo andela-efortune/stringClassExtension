@@ -1,8 +1,9 @@
 /** String Class extention test suite */
 describe('String class extention', function () {
 
-  /** Test suite to ensure that hasVowels method returns true
-   * if the string is a vowel and false if its not
+  /** 
+   * Test suite to ensure that hasVowels method returns true
+   * if the string has a vowel and false if it doesn't
    */
   describe('hasVowels method', function () {
 
