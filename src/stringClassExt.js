@@ -5,9 +5,21 @@
  * has a vowel and false if it doesn't
  * 
  * @function hasVowel
- * @return {boolean}
+ * @return {Boolean}
  */
 String.prototype.hasVowels = function () {
-    const matcher = /[AEIOUaeiou]/g;
-    return matcher.test(this);
+    return /[AEIOUaeiou]/g.test(this);
+};
+
+/**
+ * The toUpper method returns the given string with all
+ * characters capitalized.
+ * 
+ * @function toUpper
+ * @return {String}
+ */
+String.prototype.toUpper = function () {
+   return this.replace(/[a-z]/g, (char) => {
+       return String.fromCharCode(char.charCodeAt() - 32);
+	});
 };
