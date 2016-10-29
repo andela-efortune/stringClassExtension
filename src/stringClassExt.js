@@ -19,7 +19,19 @@ String.prototype.hasVowels = function () {
  * @return {String}
  */
 String.prototype.toUpper = function () {
-   return this.replace(/[a-z]/g, (char) => {
-       return String.fromCharCode(char.charCodeAt() - 32);
-	});
+    return this.replace(/[a-z]/g, (char) => {
+        return String.fromCharCode(char.charCodeAt() - 32);
+    });
+};
+
+/**
+ * The isQuestion method returns true if a string is a question
+ * and false if it's not
+ * 
+ * 
+ * @function isQuestion
+ * @return {Boolean}
+ */
+String.prototype.isQuestion = function () {
+    return /\?$/g.test(this);
 };
