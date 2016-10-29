@@ -26,7 +26,7 @@ String.prototype.toUpper = function () {
 
 /**
  * The isQuestion method returns true if a string is a question
- * and false if it's not
+ * or false if it's not
  * 
  * 
  * @function isQuestion
@@ -34,4 +34,14 @@ String.prototype.toUpper = function () {
  */
 String.prototype.isQuestion = function () {
     return /\?$/g.test(this);
+};
+
+/**
+ * The words method returns the words in a string in an Array
+ * 
+ * @function words
+ * @return {Array}
+ */
+String.prototype.words = function () {
+    return this.split(/\W+/g);
 };
