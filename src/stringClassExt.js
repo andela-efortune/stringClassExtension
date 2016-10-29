@@ -45,3 +45,14 @@ String.prototype.isQuestion = function () {
 String.prototype.words = function () {
     return this.split(/\W+/g);
 };
+
+/**
+ * The wordCount method returns the number of words in a given
+ * string
+ * 
+ * @function wordCount
+ * @return {Number}
+ */
+String.prototype.wordCount = function () {
+    return this.split(/\W+/g).length;
+};
