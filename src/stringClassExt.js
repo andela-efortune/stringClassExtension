@@ -68,3 +68,14 @@ String.prototype.toCurrency = function () {
     const exp = new RegExp('(\\d)(?=(\\d{3})+\\.)', 'g');
     return parseFloat(this).toFixed(2).replace(exp, '$1,');
 };
+
+/**
+ * The fromCurrency method the number representation of a given currency
+ * string
+ * 
+ * @function fromCurrency
+ * @return {String}
+ */
+String.prototype.fromCurrency = function () {
+    return Number(this.replace(',', '')).toString();
+};
