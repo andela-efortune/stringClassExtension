@@ -77,5 +77,9 @@ String.prototype.toCurrency = function () {
  * @return {String}
  */
 String.prototype.fromCurrency = function () {
-    return Number(this.replace(',', '')).toString();
+    return this.replace(',', '');
 };
+
+/**
+ * 
+ */
