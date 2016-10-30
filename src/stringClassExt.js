@@ -81,5 +81,27 @@ String.prototype.fromCurrency = function () {
 };
 
 /**
+ * The inverseCase method returns a string that is an inverse case of 
+ * each letter in a given string
  * 
+ * @function inverseCase
+ * @return {String}
  */
+String.prototype.inverseCase = function () {
+    let i = 0;
+    let inversedChar = '';
+
+    while(i <= this.length){
+        let char = this.charAt(i);
+        if(char === char.toUpperCase()){
+            inversedChar += char.toLowerCase();
+            console.log(char.toLowerCase());
+        }else if(char === char.toLowerCase()){
+            inversedChar += char.toUpperCase();
+            console.log(char.toUpperCase());
+        }
+        i++;
+    }
+
+    return inversedChar;
+};
