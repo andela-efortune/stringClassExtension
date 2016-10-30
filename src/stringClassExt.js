@@ -56,3 +56,15 @@ String.prototype.words = function () {
 String.prototype.wordCount = function () {
     return this.split(/\W+/g).length;
 };
+
+/**
+ * The toCurrency method returns a currency representation of a
+ * given string 
+ * 
+ * @function toCurrency
+ * @return{String}
+ */
+String.prototype.toCurrency = function () {
+    const exp = new RegExp('(\\d)(?=(\\d{3})+\\.)', 'g');
+    return parseFloat(this).toFixed(2).replace(exp, '$1,');
+};
