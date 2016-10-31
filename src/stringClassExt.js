@@ -91,11 +91,11 @@ String.prototype.inverseCase = function () {
     let i = 0;
     let inversedChar = '';
 
-    while(i <= this.length){
+    while (i <= this.length) {
         let char = this.charAt(i);
-        if(char === char.toUpperCase()){
+        if (char === char.toUpperCase()) {
             inversedChar += char.toLowerCase();
-        }else if(char === char.toLowerCase()){
+        } else if (char === char.toLowerCase()) {
             inversedChar += char.toUpperCase();
         }
         i++;
@@ -111,6 +111,16 @@ String.prototype.inverseCase = function () {
  * @function alternatingCase
  * @return {String}
  */
-String.prototype.alternatingCase = function(){
-    
+String.prototype.alternatingCase = function () {
+    let alternatingChars = '';
+
+    for (let i = 0; i < this.length; i++) {
+        if (i % 2 === 0) {
+            alternatingChars += this[i].toLowerCase();
+        } else {
+            alternatingChars += this[i].toUpperCase();
+        }
+    }
+
+    return alternatingChars;
 };
