@@ -91,17 +91,36 @@ String.prototype.inverseCase = function () {
     let i = 0;
     let inversedChar = '';
 
-    while(i <= this.length){
+    while (i <= this.length) {
         let char = this.charAt(i);
-        if(char === char.toUpperCase()){
+        if (char === char.toUpperCase()) {
             inversedChar += char.toLowerCase();
-            console.log(char.toLowerCase());
-        }else if(char === char.toLowerCase()){
+        } else if (char === char.toLowerCase()) {
             inversedChar += char.toUpperCase();
-            console.log(char.toUpperCase());
         }
         i++;
     }
-
     return inversedChar;
+};
+
+
+/**
+ * The alternatingCase method returns the alternating case of each
+ * character in a string.
+ * 
+ * @function alternatingCase
+ * @return {String}
+ */
+String.prototype.alternatingCase = function () {
+    let alternatingChars = '';
+
+    for (let i = 0; i < this.length; i++) {
+        if (i % 2 === 0) {
+            alternatingChars += this[i].toLowerCase();
+        } else {
+            alternatingChars += this[i].toUpperCase();
+        }
+    }
+
+    return alternatingChars;
 };
