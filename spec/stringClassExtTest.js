@@ -138,7 +138,7 @@ describe('String class extention', function () {
     it('Should return numbers in words', function () {
       expect('10'.numberWords()).not.toBe(null);
       expect(typeof '10'.numberWords()).toBe('string');
-      expect('10'.numberWords()).toEqual('ten');
+      expect('10'.numberWords()).toEqual('one zero');
     });
   });
 

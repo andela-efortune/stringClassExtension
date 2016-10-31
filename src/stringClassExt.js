@@ -133,13 +133,63 @@ String.prototype.alternatingCase = function () {
  * @return {String}
  */
 String.prototype.getMiddle = function () {
-    if(this.length % 2 === 0){
+    if (this.length % 2 === 0) {
 
         const firstHalf = this.substring(0, this.length / 2);
         const secondHalf = this.substring(this.length / 2);
 
-        return firstHalf.slice(-1)+secondHalf.charAt(0);
-    }else{
+        return firstHalf.slice(-1) + secondHalf.charAt(0);
+    } else {
         return this.charAt(Math.floor(this.length / 2));
     }
+};
+
+/**
+ * The numberWords method returns the number given to it in words
+ * 
+ * @function numberWords
+ * @return {String}
+ */
+String.prototype.numberWords = function () {
+    let word, str = '', char;
+  for (char = 0; char < this.length; char++) {
+    switch (this[char]){
+      case '1':
+        word = 'one';
+        break;
+      case '2':
+        word = 'two';
+        break;
+      case '3':
+        word = 'three';
+        break;
+      case '4':
+        word = 'four';
+        break;
+      case '5':
+        word = 'five';
+        break;
+      case '6':
+        word = 'six';
+        break;
+      case '7':
+        word = 'seven';
+        break;
+      case '8':
+        word = 'eight';
+        break;
+      case '9':
+        word = 'nine';
+        break;
+      case '0':
+        word = 'zero';
+        break;
+      default:
+        word = '';
+        break;
+    }
+    str += (word + ((char + 1) !== this.length ? ' ' : ''));
+  }
+
+  return str;
 };
