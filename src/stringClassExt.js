@@ -133,5 +133,13 @@ String.prototype.alternatingCase = function () {
  * @return {String}
  */
 String.prototype.getMiddle = function () {
-    return this.charAt(Math.floor(this.length / 2));
+    if(this.length % 2 === 0){
+
+        const firstHalf = this.substring(0, this.length / 2);
+        const secondHalf = this.substring(this.length / 2);
+
+        return firstHalf.slice(-1)+secondHalf.charAt(0);
+    }else{
+        return this.charAt(Math.floor(this.length / 2));
+    }
 };
