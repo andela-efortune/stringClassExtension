@@ -124,3 +124,14 @@ String.prototype.alternatingCase = function () {
 
     return alternatingChars;
 };
+
+/**
+ * The getMiddle method returns the character(s) in the middle
+ * of a string
+ * 
+ * @function getMiddle
+ * @return {String}
+ */
+String.prototype.getMiddle = function () {
+    
+};
