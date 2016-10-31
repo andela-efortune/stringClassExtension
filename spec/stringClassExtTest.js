@@ -126,6 +126,7 @@ describe('String class extention', function () {
       expect('alice'.getMiddle()).not.toBe(null);
       expect(typeof 'alice'.getMiddle()).toBe('string');
       expect('alice'.getMiddle()).toEqual('i');
+      expect('alicee'.getMiddle()).toEqual('ic');
     });
   });
 
