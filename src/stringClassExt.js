@@ -95,13 +95,22 @@ String.prototype.inverseCase = function () {
         let char = this.charAt(i);
         if(char === char.toUpperCase()){
             inversedChar += char.toLowerCase();
-            console.log(char.toLowerCase());
         }else if(char === char.toLowerCase()){
             inversedChar += char.toUpperCase();
-            console.log(char.toUpperCase());
         }
         i++;
     }
-
     return inversedChar;
+};
+
+
+/**
+ * The alternatingCase method returns the alternating case of each
+ * character in a string.
+ * 
+ * @function alternatingCase
+ * @return {String}
+ */
+String.prototype.alternatingCase = function(){
+    
 };
