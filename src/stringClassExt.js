@@ -226,7 +226,7 @@ String.prototype.numberWords = function () {
  * @return {Boolean}
  */
 String.prototype.isDigit = function () {
-    return /[\d]/.test(this);
+    return /\b\d\b/.test(this);
 };
 
 /**
