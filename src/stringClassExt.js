@@ -88,11 +88,11 @@ String.prototype.fromCurrency = function () {
  * @return {String}
  */
 String.prototype.inverseCase = function () {
-    let i = 0;
-    let inversedChar = '';
+    var i = 0,
+    inversedChar = '';
 
     while (i <= this.length) {
-        let char = this.charAt(i);
+        var char = this.charAt(i);
         if (char === char.toUpperCase()) {
             inversedChar += char.toLowerCase();
         } else if (char === char.toLowerCase()) {
@@ -112,9 +112,9 @@ String.prototype.inverseCase = function () {
  * @return {String}
  */
 String.prototype.alternatingCase = function () {
-    let alternatingChars = '';
+    var alternatingChars = '';
 
-    for (let i = 0; i < this.length; i++) {
+    for (var i = 0; i < this.length; i++) {
         if (i % 2 === 0) {
             alternatingChars += this[i].toLowerCase();
         } else {
@@ -151,7 +151,7 @@ String.prototype.getMiddle = function () {
  * @return {String}
  */
 String.prototype.numberWords = function () {
-    let word, str = '',
+    var word, str = '',
         char;
     for (char = 0; char < this.length; char++) {
         switch (this[char]) {
