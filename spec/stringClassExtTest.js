@@ -28,6 +28,19 @@ describe('String class extention', function () {
     });
   });
 
+  /** 
+   * Test suite to ensure the toLower method returns
+   * characters of the string in lowercase
+   */
+  describe('toLower method', function () {
+
+    it('Should return the lowercase all characters in a string', function () {
+      expect('FORTUNE'.toLower()).not.toBe(null);
+      expect(typeof 'FORTUNE'.toLower()).toBe('string');
+      expect('FORTUNE'.toLower()).toEqual('fortune');
+    });
+  });
+
   /** Test suite to ensure the isQuestion method returns a
    * boolean if a string is a question(ie. it ends with a question mark)
    */

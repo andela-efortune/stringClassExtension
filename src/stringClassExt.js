@@ -25,6 +25,18 @@ String.prototype.toUpper = function () {
 };
 
 /**
+ * The toLower method returns a given string in lower cases
+ * 
+ * @function toLower
+ * @return {String}
+ */
+String.prototype.toLower = function () {
+    return this.replace(/[A-Z]/g, (char) => {
+        return String.fromCharCode(char.charCodeAt() + 32);
+    });
+};
+
+/**
  * The isQuestion method returns true if a string is a question
  * or false if it's not
  * 
