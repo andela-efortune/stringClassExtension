@@ -249,7 +249,9 @@ describe('String class extention', function () {
       expect('1'.isDigit()).not.toBe(null);
       expect(typeof '1'.isDigit()).toBe('boolean');
       expect('1'.isDigit()).toBe(true);
+      expect('0'.isDigit()).toBe(true);
       expect('14'.isDigit()).toBe(false);
+      expect('141'.isDigit()).toBe(false);
 
     });
 
@@ -264,17 +266,26 @@ describe('String class extention', function () {
 
     it('Should return a boolean if a given string contains double characters',
       function () {
+
         expect('hello dear'.doubleCheck()).not.toBe(null);
         expect(typeof 'hello dear'.doubleCheck()).toBe('boolean');
         expect('hello dear'.doubleCheck()).toBe(true);
+        expect('helo dear'.doubleCheck()).toBe(false);
+        expect('Marine'.doubleCheck()).toBe(false);
+
       });
 
     it('Should return a boolean if a given string contains double whitespaces',
       function () {
-        expect('hello dear'.doubleCheck()).not.toBe(null);
-        expect(typeof 'hello dear'.doubleCheck()).toBe('boolean');
-        expect('hello  dear'.doubleCheck()).toBe(true);
+
+        expect('hey  dear'.doubleCheck()).not.toBe(null);
+        expect(typeof 'hey  dear'.doubleCheck()).toBe('boolean');
+        expect('helo  dear'.doubleCheck()).toBe(true);
+        expect('helo dear'.doubleCheck()).toBe(false);
+        expect('hey  dear'.doubleCheck()).toBe(true);
+
       });
+
   });
 
 });

@@ -238,5 +238,5 @@ String.prototype.isDigit = function () {
  * @return {Boolean}
  */
 String.prototype.doubleCheck = function () {
-    return /(\S)\1/g.test(this);
+    return /(.)\1/g.test(this);
 };
