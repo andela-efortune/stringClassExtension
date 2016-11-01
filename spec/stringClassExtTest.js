@@ -34,7 +34,7 @@ describe('String class extention', function () {
       expect('fortune'.toUpper()).not.toEqual('fortuNE');
 
     });
-    
+
   });
 
   /** 
@@ -232,7 +232,7 @@ describe('String class extention', function () {
       expect('3'.numberWords()).toEqual('three');
       expect('9'.numberWords()).toEqual('nine');
       expect('256'.numberWords()).not.toEqual('nine');
-      
+
 
     });
 

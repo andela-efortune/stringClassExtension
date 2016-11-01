@@ -112,7 +112,7 @@ String.prototype.fromCurrency = function () {
  */
 String.prototype.inverseCase = function () {
     var i = 0,
-    inversedChar = '';
+        inversedChar = '';
 
     while (i <= this.length) {
         var char = this.charAt(i);
