@@ -77,7 +77,7 @@ String.prototype.words = function () {
  * @return {Number}
  */
 String.prototype.wordCount = function () {
-    return this.split(/\W+/g).length;
+    return this.words().length;
 };
 
 /**
@@ -112,7 +112,7 @@ String.prototype.fromCurrency = function () {
  */
 String.prototype.inverseCase = function () {
     var i = 0,
-    inversedChar = '';
+        inversedChar = '';
 
     while (i <= this.length) {
         var char = this.charAt(i);
@@ -226,7 +226,7 @@ String.prototype.numberWords = function () {
  * @return {Boolean}
  */
 String.prototype.isDigit = function () {
-    return /[\d]/.test(this);
+    return /\b\d\b/.test(this);
 };
 
 /**
@@ -238,5 +238,5 @@ String.prototype.isDigit = function () {
  * @return {Boolean}
  */
 String.prototype.doubleCheck = function () {
-    return /(\S)\1/g.test(this);
+    return /(.)\1/g.test(this);
 };
