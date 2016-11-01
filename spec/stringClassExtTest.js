@@ -44,10 +44,15 @@ describe('String class extention', function () {
   describe('toLower method', function () {
 
     it('Should return the lowercase all characters in a string', function () {
+
       expect('FORTUNE'.toLower()).not.toBe(null);
       expect(typeof 'FORTUNE'.toLower()).toBe('string');
       expect('FORTUNE'.toLower()).toEqual('fortune');
+      expect('FORTUNE'.toLower()).not.toEqual('FortuNE');
+      expect('FORTUNE'.toLower()).not.toEqual('this');
+
     });
+
   });
 
   /**
