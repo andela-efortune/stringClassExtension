@@ -77,7 +77,7 @@ String.prototype.words = function () {
  * @return {Number}
  */
 String.prototype.wordCount = function () {
-    return this.split(/\W+/g).length;
+    return this.words().length;
 };
 
 /**
