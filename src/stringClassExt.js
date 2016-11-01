@@ -205,3 +205,15 @@ String.prototype.numberWords = function () {
 String.prototype.isDigit = function () {
     return /[\d]/.test(this);
 };
+
+/**
+ * The doubleCheck method returns true if a string 
+ * contains double characters (whitepaces included)
+ * and false if it doesn't.
+ * 
+ * @function doubleCheck
+ * @return {Boolean}
+ */
+String.prototype.doubleCheck = function () {
+    return /(\S)\1/g.test(this);
+};
