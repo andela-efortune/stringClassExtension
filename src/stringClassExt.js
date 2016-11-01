@@ -37,6 +37,17 @@ String.prototype.toLower = function () {
 };
 
 /**
+ * The ucFirst method returns the first character of a string in 
+ * uppercase
+ * 
+ * @function toLower
+ * @return {String}
+ */
+String.prototype.ucFirst = function () {
+    return this.substring(0, 1).toUpper() + this.substring(1).toLower();
+};
+
+/**
  * The isQuestion method returns true if a string is a question
  * or false if it's not
  * 

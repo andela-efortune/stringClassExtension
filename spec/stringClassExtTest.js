@@ -41,6 +41,18 @@ describe('String class extention', function () {
     });
   });
 
+  /**
+   * Test suite to ensure the ucFirst method returns
+   * the first character in a given string capitalized
+   */
+  describe('ucFirst method', function () {
+    it('Should return the first character of a string capitalized', function () {
+      expect('fortune'.ucFirst()).not.toBe(null);
+      expect(typeof 'fortune'.ucFirst()).toBe('string');
+      expect('fortune'.ucFirst()).toEqual('Fortune');
+    });
+  });
+
   /** Test suite to ensure the isQuestion method returns a
    * boolean if a string is a question(ie. it ends with a question mark)
    */
