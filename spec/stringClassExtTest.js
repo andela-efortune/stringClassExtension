@@ -47,9 +47,9 @@ describe('String class extention', function () {
    */
   describe('ucFirst method', function () {
     it('Should return the first character of a string capitalized', function () {
-      expect('fortune'.ucFirst().not.toBe(null));
-      expect('fortune'.ucFirst().toBe('string'));
-      expect('fortune'.ucFirst().toEqual('Fortune'));
+      expect('fortune'.ucFirst()).not.toBe(null);
+      expect(typeof 'fortune'.ucFirst()).toBe('string');
+      expect('fortune'.ucFirst()).toEqual('Fortune');
     });
   });
 
