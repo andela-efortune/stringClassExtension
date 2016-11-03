@@ -138,11 +138,7 @@ String.prototype.alternatingCase = function () {
     var alternatingChars = '';
 
     for (var i = 0; i < this.length; i++) {
-        if (i % 2 === 0) {
-            alternatingChars += this[i].toLowerCase();
-        } else {
-            alternatingChars += this[i].toUpperCase();
-        }
+        alternatingChars += i % 2 === 0 ? this[i].toLower() : this[i].toUpper();
     }
 
     return alternatingChars;
