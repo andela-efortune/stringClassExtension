@@ -19,7 +19,7 @@ String.prototype.hasVowels = function () {
  * @return {String}
  */
 String.prototype.toUpper = function () {
-    return this.replace(/[a-z]/g, (char) => {
+    return this.replace(/[a-z]/g, function (char) {
         return String.fromCharCode(char.charCodeAt() - 32);
     });
 };
@@ -31,7 +31,7 @@ String.prototype.toUpper = function () {
  * @return {String}
  */
 String.prototype.toLower = function () {
-    return this.replace(/[A-Z]/g, (char) => {
+    return this.replace(/[A-Z]/g, function (char) {
         return String.fromCharCode(char.charCodeAt() + 32);
     });
 };
@@ -88,7 +88,7 @@ String.prototype.wordCount = function () {
  * @return{String}
  */
 String.prototype.toCurrency = function () {
-    const exp = new RegExp('(\\d)(?=(\\d{3})+\\.)', 'g');
+    var exp = new RegExp('(\\d)(?=(\\d{3})+\\.)', 'g');
     return parseFloat(this).toFixed(2).replace(exp, '$1,');
 };
 
@@ -116,12 +116,10 @@ String.prototype.inverseCase = function () {
 
     while (i <= this.length) {
         var char = this.charAt(i);
-        if (char === char.toUpperCase()) {
-            inversedChar += char.toLowerCase();
-        } else if (char === char.toLowerCase()) {
-            inversedChar += char.toUpperCase();
-        }
-        i++;
+
+        inversedChar += char === char.toUpper() ?  char.toLower() : char.toUpper();
+
+        i++; 
     }
     return inversedChar;
 };
@@ -138,11 +136,7 @@ String.prototype.alternatingCase = function () {
     var alternatingChars = '';
 
     for (var i = 0; i < this.length; i++) {
-        if (i % 2 === 0) {
-            alternatingChars += this[i].toLowerCase();
-        } else {
-            alternatingChars += this[i].toUpperCase();
-        }
+        alternatingChars += i % 2 === 0 ? this[i].toLower() : this[i].toUpper();
     }
 
     return alternatingChars;
@@ -158,8 +152,8 @@ String.prototype.alternatingCase = function () {
 String.prototype.getMiddle = function () {
     if (this.length % 2 === 0) {
 
-        const firstHalf = this.substring(0, this.length / 2);
-        const secondHalf = this.substring(this.length / 2);
+        var firstHalf = this.substring(0, this.length / 2);
+        var secondHalf = this.substring(this.length / 2);
 
         return firstHalf.slice(-1) + secondHalf.charAt(0);
     } else {
@@ -174,47 +168,25 @@ String.prototype.getMiddle = function () {
  * @return {String}
  */
 String.prototype.numberWords = function () {
-    var word, str = '',
-        char;
-    for (char = 0; char < this.length; char++) {
-        switch (this[char]) {
-            case '1':
-                word = 'one';
-                break;
-            case '2':
-                word = 'two';
-                break;
-            case '3':
-                word = 'three';
-                break;
-            case '4':
-                word = 'four';
-                break;
-            case '5':
-                word = 'five';
-                break;
-            case '6':
-                word = 'six';
-                break;
-            case '7':
-                word = 'seven';
-                break;
-            case '8':
-                word = 'eight';
-                break;
-            case '9':
-                word = 'nine';
-                break;
-            case '0':
-                word = 'zero';
-                break;
-            default:
-                word = '';
-                break;
-        }
+    var str = '';
+    
+    var numWords = {
+        0: 'zero',
+        1: 'one',
+        2: 'two',
+        3: 'three',
+        4: 'four',
+        5: 'five',
+        6: 'six',
+        7: 'seven',
+        8: 'eight',
+        9: 'nine'
+    };
+    
+    for (var char = 0; char < this.length; char++) {
+       var word = numWords[this[char]] || '';
         str += (word + ((char + 1) !== this.length ? ' ' : ''));
     }
-
     return str;
 };
 
