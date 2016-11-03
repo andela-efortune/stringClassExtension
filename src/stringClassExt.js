@@ -168,47 +168,25 @@ String.prototype.getMiddle = function () {
  * @return {String}
  */
 String.prototype.numberWords = function () {
-    var word, str = '',
-        char;
-    for (char = 0; char < this.length; char++) {
-        switch (this[char]) {
-            case '1':
-                word = 'one';
-                break;
-            case '2':
-                word = 'two';
-                break;
-            case '3':
-                word = 'three';
-                break;
-            case '4':
-                word = 'four';
-                break;
-            case '5':
-                word = 'five';
-                break;
-            case '6':
-                word = 'six';
-                break;
-            case '7':
-                word = 'seven';
-                break;
-            case '8':
-                word = 'eight';
-                break;
-            case '9':
-                word = 'nine';
-                break;
-            case '0':
-                word = 'zero';
-                break;
-            default:
-                word = '';
-                break;
-        }
+    var str = '';
+    
+    var numWords = {
+        0: 'zero',
+        1: 'one',
+        2: 'two',
+        3: 'three',
+        4: 'four',
+        5: 'five',
+        6: 'six',
+        7: 'seven',
+        8: 'eight',
+        9: 'nine'
+    };
+    
+    for (var char = 0; char < this.length; char++) {
+       var word = numWords[this[char]] || '';
         str += (word + ((char + 1) !== this.length ? ' ' : ''));
     }
-
     return str;
 };
 
