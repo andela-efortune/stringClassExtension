@@ -116,12 +116,10 @@ String.prototype.inverseCase = function () {
 
     while (i <= this.length) {
         var char = this.charAt(i);
-        if (char === char.toUpperCase()) {
-            inversedChar += char.toLowerCase();
-        } else if (char === char.toLowerCase()) {
-            inversedChar += char.toUpperCase();
-        }
-        i++;
+
+        inversedChar += char === char.toUpper() ?  char.toLower() : char.toUpper();
+
+        i++; 
     }
     return inversedChar;
 };
