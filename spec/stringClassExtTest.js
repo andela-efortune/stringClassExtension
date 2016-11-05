@@ -135,7 +135,7 @@ describe('String class extension', function () {
    */
   describe('fromCurrency method', function () {
 
-    it('Should return a number representation of a currency representation string', function () {
+    it('Should return a number representation of a string', function () {
       expect('100,000.83'.fromCurrency()).not.toBe(null);
       expect(typeof '100,000.83'.fromCurrency()).toBe('string');
       expect('100,000.83'.fromCurrency()).toEqual('100000.83');
