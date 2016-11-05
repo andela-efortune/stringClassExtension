@@ -13,6 +13,7 @@ describe('String class extension', function () {
       expect('aeiou'.hasVowels()).toBe(true);
       expect('rlhz'.hasVowels()).toBe(false);
       expect('Schrz'.hasVowels()).toBe(false);
+      expect('fortune'.hasVowels()).toBe(true);
     });
 
   });
