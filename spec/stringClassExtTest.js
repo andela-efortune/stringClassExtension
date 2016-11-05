@@ -178,9 +178,8 @@ describe('String class extension', function () {
   });
 
   /** 
-   * Test suite to ensure that getMiddle method returns a
-   * string that is a character(s) in the middle of the given
-   * string
+   * Test suite to ensure that getMiddle method returns 
+   * the character(s) in the middle of a given string
    */
   describe('getMiddle method', function () {
 
