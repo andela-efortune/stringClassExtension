@@ -207,6 +207,7 @@ describe('String class extension', function () {
       expect('3'.numberWords()).toEqual('three');
       expect('9'.numberWords()).toEqual('nine');
       expect('256'.numberWords()).not.toEqual('nine');
+      expect('256'.numberWords()).toEqual('two five six');
     });
 
   });
