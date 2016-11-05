@@ -179,9 +179,9 @@ String.prototype.numberWords = function () {
         9: 'nine'
     };
 
-    for (var char = 0; char < this.length; char++) {
-        var word = numWords[this[char]] || '';
-        str += (word + ((char + 1) !== this.length ? ' ' : ''));
+    for (var i = 0; i < this.length; i++) {
+        var word = numWords[this[i]] || '';
+        str += (word + ((i + 1) !== this.length ? ' ' : ''));
     }
     return str;
 };
