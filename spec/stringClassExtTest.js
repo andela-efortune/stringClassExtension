@@ -1,5 +1,5 @@
-/** String Class extention test suite */
-describe('String class extention', function () {
+/** String Class extension test suite */
+describe('String class extension', function () {
 
   /** 
    * Test suite to ensure that hasVowels method returns true
