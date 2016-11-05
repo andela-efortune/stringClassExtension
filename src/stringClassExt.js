@@ -152,10 +152,12 @@ String.prototype.alternatingCase = function () {
 String.prototype.getMiddle = function () {
     if (this.length % 2 === 0) {
 
-        var firstHalf = this.substring(0, this.length / 2);
-        var secondHalf = this.substring(this.length / 2);
+        // var firstHalf = this.substring(0, this.length / 2);
+        // var secondHalf = this.substring(this.length / 2);
 
-        return firstHalf.slice(-1) + secondHalf.charAt(0);
+        // return firstHalf.slice(-1) + secondHalf.charAt(0);
+        return this.charAt(this.length/2-1) + 
+            this.charAt(this.length/2);
     } else {
         return this.charAt(Math.floor(this.length / 2));
     }
