@@ -1,5 +1,5 @@
-/** String Class extention test suite */
-describe('String class extention', function () {
+/** String Class extension test suite */
+describe('String class extension', function () {
 
   /** 
    * Test suite to ensure that hasVowels method returns true
@@ -13,6 +13,7 @@ describe('String class extention', function () {
       expect('aeiou'.hasVowels()).toBe(true);
       expect('rlhz'.hasVowels()).toBe(false);
       expect('Schrz'.hasVowels()).toBe(false);
+      expect('fortune'.hasVowels()).toBe(true);
     });
 
   });
@@ -34,12 +35,12 @@ describe('String class extention', function () {
   });
 
   /** 
-   * Test suite to ensure the toLower method returns
-   * characters of the string in lowercase
+   * Test suite to ensure the toLower method returns the
+   * characters in a given string in lowercase
    */
   describe('toLower method', function () {
 
-    it('Should return the lowercase all characters in a string', function () {
+    it('Should return the lowercase of all characters in a string', function () {
       expect('FORTUNE'.toLower()).not.toBe(null);
       expect(typeof 'FORTUNE'.toLower()).toBe('string');
       expect('FORTUNE'.toLower()).toEqual('fortune');
@@ -60,6 +61,7 @@ describe('String class extention', function () {
       expect(typeof 'fortune'.ucFirst()).toBe('string');
       expect('fortune'.ucFirst()).toEqual('Fortune');
       expect('fortune'.ucFirst()).not.toEqual('fortune');
+      expect('fortUNe'.ucFirst()).toEqual('FortUNe');
     });
 
   });
@@ -133,12 +135,12 @@ describe('String class extention', function () {
    */
   describe('fromCurrency method', function () {
 
-    it('Should return a number representation of a currency representation string', function () {
-        expect('100,000.83'.fromCurrency()).not.toBe(null);
-        expect(typeof '100,000.83'.fromCurrency()).toBe('string');
-        expect('100,000.83'.fromCurrency()).toEqual('100000.83');
-        expect('10,000'.fromCurrency()).toEqual('10000');
-      });
+    it('Should return a number representation of a string', function () {
+      expect('100,000.83'.fromCurrency()).not.toBe(null);
+      expect(typeof '100,000.83'.fromCurrency()).toBe('string');
+      expect('100,000.83'.fromCurrency()).toEqual('100000.83');
+      expect('10,000'.fromCurrency()).toEqual('10000');
+    });
 
   });
 
@@ -176,9 +178,8 @@ describe('String class extention', function () {
   });
 
   /** 
-   * Test suite to ensure that getMiddle method returns a
-   * string that is a character(s) in the middle of the given
-   * string
+   * Test suite to ensure that getMiddle method returns 
+   * the character(s) in the middle of a given string
    */
   describe('getMiddle method', function () {
 
@@ -206,13 +207,14 @@ describe('String class extention', function () {
       expect('3'.numberWords()).toEqual('three');
       expect('9'.numberWords()).toEqual('nine');
       expect('256'.numberWords()).not.toEqual('nine');
+      expect('256'.numberWords()).toEqual('two five six');
     });
 
   });
 
   /** 
    * Test suite to ensure that isDigit method returns
-   * true if its given a digit and false if its not
+   * true if its given a digit and false if not
    */
   describe('isDigit method', function () {
 
@@ -223,6 +225,7 @@ describe('String class extention', function () {
       expect('0'.isDigit()).toBe(true);
       expect('14'.isDigit()).toBe(false);
       expect('141'.isDigit()).toBe(false);
+      expect('A'.isDigit()).toBe(false);
     });
 
   });
@@ -235,20 +238,20 @@ describe('String class extention', function () {
   describe('doubleCheck method', function () {
 
     it('Should return a boolean if a given string contains double characters', function () {
-        expect('hello dear'.doubleCheck()).not.toBe(null);
-        expect(typeof 'hello dear'.doubleCheck()).toBe('boolean');
-        expect('hello dear'.doubleCheck()).toBe(true);
-        expect('helo dear'.doubleCheck()).toBe(false);
-        expect('Marine'.doubleCheck()).toBe(false);
-      });
+      expect('hello dear'.doubleCheck()).not.toBe(null);
+      expect(typeof 'hello dear'.doubleCheck()).toBe('boolean');
+      expect('hello dear'.doubleCheck()).toBe(true);
+      expect('helo dear'.doubleCheck()).toBe(false);
+      expect('Marine'.doubleCheck()).toBe(false);
+    });
 
     it('Should return a boolean if a given string contains double whitespaces', function () {
-        expect('hey  dear'.doubleCheck()).not.toBe(null);
-        expect(typeof 'hey  dear'.doubleCheck()).toBe('boolean');
-        expect('helo  dear'.doubleCheck()).toBe(true);
-        expect('helo dear'.doubleCheck()).toBe(false);
-        expect('hey  dear'.doubleCheck()).toBe(true);
-      });
+      expect('hey  dear'.doubleCheck()).not.toBe(null);
+      expect(typeof 'hey  dear'.doubleCheck()).toBe('boolean');
+      expect('helo  dear'.doubleCheck()).toBe(true);
+      expect('helo dear'.doubleCheck()).toBe(false);
+      expect('hey  dear'.doubleCheck()).toBe(true);
+    });
 
   });
 

@@ -44,7 +44,7 @@ String.prototype.toLower = function () {
  * @return {String}
  */
 String.prototype.ucFirst = function () {
-    return this.substring(0, 1).toUpper() + this.substring(1).toLower();
+    return this.substring(0, 1).toUpper() + this.substring(1);
 };
 
 /**
@@ -117,9 +117,9 @@ String.prototype.inverseCase = function () {
     while (i <= this.length) {
         var char = this.charAt(i);
 
-        inversedChar += char === char.toUpper() ?  char.toLower() : char.toUpper();
+        inversedChar += char === char.toUpper() ? char.toLower() : char.toUpper();
 
-        i++; 
+        i++;
     }
     return inversedChar;
 };
@@ -151,11 +151,7 @@ String.prototype.alternatingCase = function () {
  */
 String.prototype.getMiddle = function () {
     if (this.length % 2 === 0) {
-
-        var firstHalf = this.substring(0, this.length / 2);
-        var secondHalf = this.substring(this.length / 2);
-
-        return firstHalf.slice(-1) + secondHalf.charAt(0);
+        return this.charAt(this.length / 2 - 1) + this.charAt(this.length / 2);
     } else {
         return this.charAt(Math.floor(this.length / 2));
     }
@@ -169,7 +165,7 @@ String.prototype.getMiddle = function () {
  */
 String.prototype.numberWords = function () {
     var str = '';
-    
+
     var numWords = {
         0: 'zero',
         1: 'one',
@@ -182,17 +178,17 @@ String.prototype.numberWords = function () {
         8: 'eight',
         9: 'nine'
     };
-    
-    for (var char = 0; char < this.length; char++) {
-       var word = numWords[this[char]] || '';
-        str += (word + ((char + 1) !== this.length ? ' ' : ''));
+
+    for (var i = 0; i < this.length; i++) {
+        var word = numWords[this[i]] || '';
+        str += (word + ((i + 1) !== this.length ? ' ' : ''));
     }
     return str;
 };
 
 /**
  * The isDigit method returns true if the given string
- * is a number and false if its not.
+ * is one number (ie. a digit) and false if its not.
  * 
  * @function isDigit
  * @return {Boolean}
