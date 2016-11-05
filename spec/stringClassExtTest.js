@@ -214,7 +214,7 @@ describe('String class extension', function () {
 
   /** 
    * Test suite to ensure that isDigit method returns
-   * true if its given a digit and false if its not
+   * true if its given a digit and false if not
    */
   describe('isDigit method', function () {
 
@@ -225,6 +225,7 @@ describe('String class extension', function () {
       expect('0'.isDigit()).toBe(true);
       expect('14'.isDigit()).toBe(false);
       expect('141'.isDigit()).toBe(false);
+      expect('A'.isDigit()).toBe(false);
     });
 
   });
