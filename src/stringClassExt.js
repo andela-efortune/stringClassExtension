@@ -44,7 +44,7 @@ String.prototype.toLower = function () {
  * @return {String}
  */
 String.prototype.ucFirst = function () {
-    return this.substring(0, 1).toUpper() + this.substring(1).toLower();
+    return this.substring(0, 1).toUpper() + this.substring(1);
 };
 
 /**
