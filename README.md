@@ -1,8 +1,10 @@
 [![Build Status](https://travis-ci.org/andela-efortune/stringClassExtension.svg?branch=develop)](https://travis-ci.org/andela-efortune/stringClassExtension)
 [![Coverage Status](https://coveralls.io/repos/github/andela-efortune/stringClassExtension/badge.svg?branch=develop)](https://coveralls.io/github/andela-efortune/stringClassExtension?branch=develop)
 
-# Checkpoint Two: String Class Extension
-This is a JavaScript String Class Extension that uses a Prototype Oriented Programming, methods, procedures and instance attributes to support more string manipulation features, and these features/methods are outlined below.
+# Checkpoint Two: String Class Extension 
+This is a JavaScript String Class Extension that uses a Prototype Oriented Programming, methods, procedures and instance attributes to support more string manipulation features, and these features/methods are outlined below. 
+
+### [Link to use these string methods](https://andela-efortune.github.io/stringClassExtension/)
 
 ##Features/Methods 
 ***hasVowel()* method**
