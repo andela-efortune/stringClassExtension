@@ -12,8 +12,6 @@ describe('String class extension', function () {
       expect(typeof 'aeiou'.hasVowels()).toBe('boolean');
       expect('aeiou'.hasVowels()).toBe(true);
       expect('rlhz'.hasVowels()).toBe(false);
-      expect('Schrz'.hasVowels()).toBe(false);
-      expect('fortune'.hasVowels()).toBe(true);
     });
 
   });
@@ -29,7 +27,6 @@ describe('String class extension', function () {
       expect('fortune'.toUpper()).not.toBe(null);
       expect(typeof 'fortune'.toUpper()).toBe('string');
       expect('fortune'.toUpper()).toEqual('FORTUNE');
-      expect('fortune'.toUpper()).not.toEqual('fortuNE');
     });
 
   });
@@ -44,8 +41,6 @@ describe('String class extension', function () {
       expect('FORTUNE'.toLower()).not.toBe(null);
       expect(typeof 'FORTUNE'.toLower()).toBe('string');
       expect('FORTUNE'.toLower()).toEqual('fortune');
-      expect('FORTUNE'.toLower()).not.toEqual('FortuNE');
-      expect('FORTUNE'.toLower()).not.toEqual('this');
     });
 
   });
@@ -60,8 +55,6 @@ describe('String class extension', function () {
       expect('fortune'.ucFirst()).not.toBe(null);
       expect(typeof 'fortune'.ucFirst()).toBe('string');
       expect('fortune'.ucFirst()).toEqual('Fortune');
-      expect('fortune'.ucFirst()).not.toEqual('fortune');
-      expect('fortUNe'.ucFirst()).toEqual('FortUNe');
     });
 
   });
@@ -90,7 +83,6 @@ describe('String class extension', function () {
 
     it('Should return an array of words from a given string', function () {
       expect('call me'.words()).not.toBe(null);
-      expect(typeof 'call me'.words()).toBe('object');
       expect(Array.isArray('call me'.words())).toBe(true);
       expect('call me'.words()).toEqual(['call', 'me']);
     });
@@ -154,8 +146,6 @@ describe('String class extension', function () {
       expect('FoRtunE'.inverseCase()).not.toBe(null);
       expect(typeof 'FoRtunE'.inverseCase()).toBe('string');
       expect('FoRtunE'.inverseCase()).toEqual('fOrTUNe');
-      expect('jOhNSon'.inverseCase()).not.toEqual('fOrTUNe');
-      expect('stePH'.inverseCase()).toEqual('STEph');
     });
 
   });
@@ -172,7 +162,6 @@ describe('String class extension', function () {
       expect(typeof 'fortune'.alternatingCase()).toBe('string');
       expect('fortune'.alternatingCase()).toEqual('fOrTuNe');
       expect('johnson'.alternatingCase()).toEqual('jOhNsOn');
-      expect('steph'.alternatingCase()).not.toEqual('jOhNsOn');
     });
 
   });
@@ -188,7 +177,6 @@ describe('String class extension', function () {
       expect(typeof 'alice'.getMiddle()).toBe('string');
       expect('alice'.getMiddle()).toEqual('i');
       expect('alicee'.getMiddle()).toEqual('ic');
-      expect('johnson'.getMiddle()).not.toEqual('ic');
       expect('step'.getMiddle()).toEqual('te');
     });
 
@@ -206,7 +194,6 @@ describe('String class extension', function () {
       expect('10'.numberWords()).toEqual('one zero');
       expect('3'.numberWords()).toEqual('three');
       expect('9'.numberWords()).toEqual('nine');
-      expect('256'.numberWords()).not.toEqual('nine');
       expect('256'.numberWords()).toEqual('two five six');
     });
 
