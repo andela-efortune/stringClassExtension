@@ -146,8 +146,6 @@ describe('String class extension', function () {
       expect('FoRtunE'.inverseCase()).not.toBe(null);
       expect(typeof 'FoRtunE'.inverseCase()).toBe('string');
       expect('FoRtunE'.inverseCase()).toEqual('fOrTUNe');
-      expect('jOhNSon'.inverseCase()).not.toEqual('fOrTUNe');
-      expect('stePH'.inverseCase()).toEqual('STEph');
     });
 
   });
