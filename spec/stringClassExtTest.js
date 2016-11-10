@@ -41,8 +41,6 @@ describe('String class extension', function () {
       expect('FORTUNE'.toLower()).not.toBe(null);
       expect(typeof 'FORTUNE'.toLower()).toBe('string');
       expect('FORTUNE'.toLower()).toEqual('fortune');
-      expect('FORTUNE'.toLower()).not.toEqual('FortuNE');
-      expect('FORTUNE'.toLower()).not.toEqual('this');
     });
 
   });
