@@ -12,8 +12,6 @@ describe('String class extension', function () {
       expect(typeof 'aeiou'.hasVowels()).toBe('boolean');
       expect('aeiou'.hasVowels()).toBe(true);
       expect('rlhz'.hasVowels()).toBe(false);
-      expect('Schrz'.hasVowels()).toBe(false);
-      expect('fortune'.hasVowels()).toBe(true);
     });
 
   });
