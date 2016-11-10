@@ -27,7 +27,6 @@ describe('String class extension', function () {
       expect('fortune'.toUpper()).not.toBe(null);
       expect(typeof 'fortune'.toUpper()).toBe('string');
       expect('fortune'.toUpper()).toEqual('FORTUNE');
-      expect('fortune'.toUpper()).not.toEqual('fortuNE');
     });
 
   });
