@@ -83,7 +83,6 @@ describe('String class extension', function () {
 
     it('Should return an array of words from a given string', function () {
       expect('call me'.words()).not.toBe(null);
-      expect(typeof 'call me'.words()).toBe('object');
       expect(Array.isArray('call me'.words())).toBe(true);
       expect('call me'.words()).toEqual(['call', 'me']);
     });
