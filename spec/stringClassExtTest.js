@@ -162,7 +162,6 @@ describe('String class extension', function () {
       expect(typeof 'fortune'.alternatingCase()).toBe('string');
       expect('fortune'.alternatingCase()).toEqual('fOrTuNe');
       expect('johnson'.alternatingCase()).toEqual('jOhNsOn');
-      expect('steph'.alternatingCase()).not.toEqual('jOhNsOn');
     });
 
   });
