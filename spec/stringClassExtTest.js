@@ -177,7 +177,6 @@ describe('String class extension', function () {
       expect(typeof 'alice'.getMiddle()).toBe('string');
       expect('alice'.getMiddle()).toEqual('i');
       expect('alicee'.getMiddle()).toEqual('ic');
-      expect('johnson'.getMiddle()).not.toEqual('ic');
       expect('step'.getMiddle()).toEqual('te');
     });
 
