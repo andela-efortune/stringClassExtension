@@ -55,8 +55,6 @@ describe('String class extension', function () {
       expect('fortune'.ucFirst()).not.toBe(null);
       expect(typeof 'fortune'.ucFirst()).toBe('string');
       expect('fortune'.ucFirst()).toEqual('Fortune');
-      expect('fortune'.ucFirst()).not.toEqual('fortune');
-      expect('fortUNe'.ucFirst()).toEqual('FortUNe');
     });
 
   });
