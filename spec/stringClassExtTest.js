@@ -1,7 +1,7 @@
 /** String Class extension test suite */
 describe('String class extension', function () {
 
-  /** 
+  /**
    * Test suite to ensure that hasVowels method returns true
    * if the string has a vowel and false if it doesn't
    */
@@ -17,7 +17,7 @@ describe('String class extension', function () {
   });
 
 
-  /** 
+  /**
    * Test suite to ensure the toUpper method returns
    * capitalized characters of the string
    */
@@ -31,7 +31,7 @@ describe('String class extension', function () {
 
   });
 
-  /** 
+  /**
    * Test suite to ensure the toLower method returns the
    * characters in a given string in lowercase
    */
@@ -59,7 +59,7 @@ describe('String class extension', function () {
 
   });
 
-  /** 
+  /**
    * Test suite to ensure the isQuestion method returns a
    * boolean if a string is a question(ie. it ends with a question mark)
    */
@@ -75,7 +75,7 @@ describe('String class extension', function () {
 
   });
 
-  /** 
+  /**
    * Test suite to ensure that words method returns an
    * Array of words from a given string
    */
@@ -89,7 +89,7 @@ describe('String class extension', function () {
 
   });
 
-  /** 
+  /**
    * Test suite to ensure that wordCount method returns the
    * Number of words in a given string
    */
@@ -104,7 +104,7 @@ describe('String class extension', function () {
 
   });
 
-  /** 
+  /**
    * Test suite to ensure that toCurrency method returns a
    * currency representation  of a given string
    */
@@ -121,7 +121,7 @@ describe('String class extension', function () {
   });
 
 
-  /** 
+  /**
    * Test suite to ensure that fromCurrency method returns a
    * number representation  of a given string
    */
@@ -136,7 +136,7 @@ describe('String class extension', function () {
 
   });
 
-  /** 
+  /**
    * Test suite to ensure that inverseCase method returns a
    * a string that is an inverse case of each letter in a given string
    */
@@ -150,7 +150,7 @@ describe('String class extension', function () {
 
   });
 
-  /** 
+  /**
    * Test suite to ensure that alternatingCase method returns a
    * string that is in alternating cases of each character in a given string
    * and it must start with a lower case
@@ -166,8 +166,8 @@ describe('String class extension', function () {
 
   });
 
-  /** 
-   * Test suite to ensure that getMiddle method returns 
+  /**
+   * Test suite to ensure that getMiddle method returns
    * the character(s) in the middle of a given string
    */
   describe('getMiddle method', function () {
@@ -177,12 +177,11 @@ describe('String class extension', function () {
       expect(typeof 'alice'.getMiddle()).toBe('string');
       expect('alice'.getMiddle()).toEqual('i');
       expect('alicee'.getMiddle()).toEqual('ic');
-      expect('step'.getMiddle()).toEqual('te');
     });
 
   });
 
-  /** 
+  /**
    * Test suite to ensure that numberWords method returns
    * numbers in words
    */
@@ -199,7 +198,7 @@ describe('String class extension', function () {
 
   });
 
-  /** 
+  /**
    * Test suite to ensure that isDigit method returns
    * true if its given a digit and false if not
    */
@@ -217,7 +216,7 @@ describe('String class extension', function () {
 
   });
 
-  /** 
+  /**
    * Test suite to ensure that doubleCheck method returns
    * true if a string contain double characters including
    * whitespaces and false if it doesn't
