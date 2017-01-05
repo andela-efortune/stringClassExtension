@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>String Class Extension</title>
@@ -15,103 +16,106 @@
 
     <script src="src/stringClassExt.js"></script>
 
-    
+
 </head>
+
 <body>
-  <nav class="blue darken-4" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" 
-    class="brand-logo">SCXtension</a>
-    </div>
-  </nav>
-
-  <div class="container">
-    <div class="section">
-
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12">
-          <div class="icon-block">
-            <h2 class="center light-blue-text">String Class Extension</h2>
-            <h5 class="center">The Select Method is a list of dropdown methods, that can be applied to the string</h5>
-
-          <div class="input-field">
-             
-            <input placeholder="Enter a string" id="str" type="text" class="validate col s9">
-            <label for="str"></label>
-            <!-- Dropdown Trigger -->
-              <a class='dropdown-button btn col s3' href='#' data-activates='dropdown1'>Select Method</a>
-
-              <!-- Dropdown Structure -->
-              <ul id='dropdown1' class='dropdown-content'>
-
-                <li onclick="displayView(usersInput().hasVowels())"><a >hasVowels</a></li>
-                <li onclick="displayView(usersInput().toUpper())"><a>toUpper</a></li>
-                <li onclick="displayView(usersInput().toLower())"><a>toLower</a></li>
-                <li onclick="displayView(usersInput().ucFirst())"><a>ucFirst</a></li>
-                <li onclick="displayView(usersInput().isQuestion())"><a>isQuestion</a></li>
-                <li onclick="displayView(usersInput().words())"><a>words</a></li>
-                <li onclick="displayView(usersInput().wordCount())"><a>wordCount</a></li>
-                <li onclick="displayView(usersInput().toCurrency())"><a>toCurrency</a></li>
-                <li onclick="displayView(usersInput().fromCurrency())"><a>fromCurrency</a></li>
-                <li onclick="displayView(usersInput().inverseCase())"><a>inverseCase</a></li>
-                <li onclick="displayView(usersInput().alternatingCase())"><a>alternatingCase</a></li>
-                <li onclick="displayView(usersInput().getMiddle())"><a>getMiddle</a></li>
-                <li onclick="displayView(usersInput().numberWords())"><a>numberWords</a></li>
-                <li onclick="displayView(usersInput().isDigit())"><a>isDigit</a></li>
-                <li onclick="displayView(usersInput().doubleCheck())"><a>doubleCheck</a></li>
-                
-
-              </ul>
-            
-          </div>
-          
-          </div>
+    <nav class="blue darken-4" role="navigation">
+        <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">SC<em>Xtension</em></a>
         </div>
+    </nav>
 
-        <div class="col s12">
+    <div class="container">
+        <div class="section">
 
-          <div class="row">
-            <h5 class=" center light-blue-text">Result Display</h5>
-            <form class="col s12">
-              <div class="row">
-                <div class="input-field col s12">
-                  <textarea id="textarea1" class="materialize-textarea"></textarea>
-                  <label for="textarea1"></label>
+            <!--   Icon Section   -->
+            <div class="row">
+                <div class="col s12">
+                    <div class="icon-block">
+                        <h2 class="center light-blue-text">String Class Extension</h2>
+                        <h5 class="center">The Select Method is a list of dropdown methods, that can be applied to the string</h5>
+
+                        <div class="input-field">
+
+                            <input placeholder="Enter a string" id="str" type="text" class="validate col s9">
+                            <label for="str"></label>
+                            <!-- Dropdown Trigger -->
+                            <a class='dropdown-button btn col s3' href='#' data-activates='dropdown1'>Select Method</a>
+
+                            <!-- Dropdown Structure -->
+                            <ul id='dropdown1' class='dropdown-content'>
+
+                                <li onclick="displayView(usersInput().hasVowels())"><a>hasVowels</a></li>
+                                <li onclick="displayView(usersInput().toUpper())"><a>toUpper</a></li>
+                                <li onclick="displayView(usersInput().toLower())"><a>toLower</a></li>
+                                <li onclick="displayView(usersInput().ucFirst())"><a>ucFirst</a></li>
+                                <li onclick="displayView(usersInput().isQuestion())"><a>isQuestion</a></li>
+                                <li onclick="displayView(usersInput().words())"><a>words</a></li>
+                                <li onclick="displayView(usersInput().wordCount())"><a>wordCount</a></li>
+                                <li onclick="displayView(usersInput().toCurrency())"><a>toCurrency</a></li>
+                                <li onclick="displayView(usersInput().fromCurrency())"><a>fromCurrency</a></li>
+                                <li onclick="displayView(usersInput().inverseCase())"><a>inverseCase</a></li>
+                                <li onclick="displayView(usersInput().alternatingCase())"><a>alternatingCase</a></li>
+                                <li onclick="displayView(usersInput().getMiddle())"><a>getMiddle</a></li>
+                                <li onclick="displayView(usersInput().numberWords())"><a>numberWords</a></li>
+                                <li onclick="displayView(usersInput().isDigit())"><a>isDigit</a></li>
+                                <li onclick="displayView(usersInput().doubleCheck())"><a>doubleCheck</a></li>
+
+
+                            </ul>
+
+                        </div>
+
+                    </div>
                 </div>
-              </div>
-            </form>
-          </div>
-        </div>
-    </div>
 
-    <script>
+                <div class="col s12">
 
-      function usersInput(){
+                    <div class="row">
+                        <h5 class=" center light-blue-text">Result Display</h5>
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                    <label for="textarea1"></label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
 
-        var inputString = document.getElementById('str').value;
 
-        if (inputString !== null){
+            <!-- Footer -->
+            <hr>
+            <footer class="text-center footerstyle">
+                <p>&copy; 2017 Fortune Ekeruo, Inc.</p>
+            </footer>
+            <script>
+                function usersInput() {
 
-          return inputString;
+                    var inputString = document.getElementById('str').value;
 
-        }else{
+                    if (inputString !== null) {
 
-          throw 'empty input, please ensure you entered string';
+                        return inputString;
 
-        }
-        
-      }
+                    } else {
 
-      function displayView(result){
+                        throw 'empty input, please ensure you entered string';
 
-        document.getElementById('textarea1').value = '';
+                    }
 
-        document.getElementById('textarea1').value += result + '\r';
-        
-      }
+                }
 
-      
+                function displayView(result) {
 
-    </script>
+                    document.getElementById('textarea1').value = '';
+
+                    document.getElementById('textarea1').value += result + '\r';
+
+                }
+            </script>
 </body>
+
 </html>
